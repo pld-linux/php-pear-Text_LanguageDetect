@@ -8,7 +8,7 @@ Summary:	%{_pearname} - language detection class
 Summary(pl):	%{_pearname} - klasa do okre¶lania jêzyka
 Name:		php-pear-%{_pearname}
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -49,5 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/%{_pearname}/{docs/example_clui.php,docs/example_web.php}
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Text/LanguageDetect.php
-
-%{php_pear_dir}/data/Text_LanguageDetect/data/lang.dat
+%{php_pear_dir}/data/Text_LanguageDetect/lang.dat
