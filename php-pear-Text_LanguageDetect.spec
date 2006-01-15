@@ -9,6 +9,7 @@ Summary(pl):	%{_pearname} - klasa do okre¶lania jêzyka
 Name:		php-pear-%{_pearname}
 Version:	0.1.1
 Release:	3
+Epoch:		0
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
