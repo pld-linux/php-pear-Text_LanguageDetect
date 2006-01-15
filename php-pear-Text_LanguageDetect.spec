@@ -8,7 +8,7 @@ Summary:	%{_pearname} - language detection class
 Summary(pl):	%{_pearname} - klasa do okre¶lania jêzyka
 Name:		php-pear-%{_pearname}
 Version:	0.1.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -32,8 +32,24 @@ tekstu i zwróciæ listê najbardziej prawdopodobnych rezultatów.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl):	Testy dla PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+AutoReq:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl
+Testy dla PEAR::%{_pearname}.
+
 %prep
 %pear_package_setup
+
+mv ./%{php_pear_dir}/tests/%{_pearname}/{tests/*,}
+rmdir ./%{php_pear_dir}/tests/%{_pearname}/tests
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,4 +65,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/%{_pearname}/{docs/example_clui.php,docs/example_web.php}
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Text/LanguageDetect.php
-%{php_pear_dir}/data/Text_LanguageDetect/lang.dat
+
+%{php_pear_dir}/data/Text_LanguageDetect
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
