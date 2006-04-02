@@ -1,0 +1,11 @@
+--- Text_LanguageDetect-0.2.0/usr/share/pear/Text/LanguageDetect.php~	2006-04-02 14:51:21.000000000 +0300
++++ Text_LanguageDetect-0.2.0/usr/share/pear/Text/LanguageDetect.php	2006-04-02 14:53:32.000000000 +0300
+@@ -22,7 +22,7 @@
+  */
+ 
+ require_once 'PEAR.php';
+-require_once 'LanguageDetect/Parser.php';
++require_once 'Text/LanguageDetect/Parser.php';
+ 
+ /**
+  * Language detection class
