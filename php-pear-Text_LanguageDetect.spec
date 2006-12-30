@@ -7,14 +7,13 @@
 Summary:	%{_pearname} - language detection class
 Summary(pl):	%{_pearname} - klasa do okre¶lania jêzyka
 Name:		php-pear-%{_pearname}
-Version:	0.2.0
+Version:	0.2.1
 Release:	1
 Epoch:		0
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	76243ad353743b15c5257fc17f63ab5a
-Patch0:		Text_LanguageDetect.patch
+# Source0-md5:	32950703be66d29c1697ea2ed78a2244
 URL:		http://pear.php.net/package/Text_LanguageDetect/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -52,7 +51,6 @@ Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
 
 mv ./%{php_pear_dir}/tests/%{_pearname}/{tests/*,}
 rmdir ./%{php_pear_dir}/tests/%{_pearname}/tests
