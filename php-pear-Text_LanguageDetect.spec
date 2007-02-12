@@ -5,7 +5,7 @@
 %define		_pearname	Text_LanguageDetect
 
 Summary:	%{_pearname} - language detection class
-Summary(pl.UTF-8):   %{_pearname} - klasa do określania języka
+Summary(pl.UTF-8):	%{_pearname} - klasa do określania języka
 Name:		php-pear-%{_pearname}
 Version:	0.2.1
 Release:	1
@@ -37,7 +37,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
