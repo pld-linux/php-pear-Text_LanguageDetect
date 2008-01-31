@@ -8,7 +8,7 @@ Summary:	%{_pearname} - language detection class
 Summary(pl.UTF-8):	%{_pearname} - klasa do określania języka
 Name:		php-pear-%{_pearname}
 Version:	0.2.1
-Release:	1
+Release:	2
 Epoch:		0
 License:	BSD
 Group:		Development/Languages/PHP
