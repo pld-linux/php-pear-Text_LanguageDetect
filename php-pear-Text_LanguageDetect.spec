@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - language detection class
 Summary(pl.UTF-8):	%{_pearname} - klasa do określania języka
 Name:		php-pear-%{_pearname}
-Version:	0.2.1
-Release:	2
+Version:	0.2.3
+Release:	1
 Epoch:		0
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	32950703be66d29c1697ea2ed78a2244
+# Source0-md5:	551092304e74624972f86e5b7e18a0ca
 URL:		http://pear.php.net/package/Text_LanguageDetect/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
