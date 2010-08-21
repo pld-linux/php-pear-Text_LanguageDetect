@@ -1,13 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Text
-%define		_subclass	LanguageDetect
 %define		_status		alpha
 %define		_pearname	Text_LanguageDetect
 Summary:	%{_pearname} - language detection class
 Summary(pl.UTF-8):	%{_pearname} - klasa do określania języka
 Name:		php-pear-%{_pearname}
 Version:	0.2.3
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -17,6 +15,7 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.0.3
+Requires:	php-pcre
 Requires:	php-pear
 Suggests:	php-mbstring
 BuildArch:	noarch
