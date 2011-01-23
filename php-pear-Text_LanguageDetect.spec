@@ -18,6 +18,7 @@ Requires:	php-common >= 3:4.0.3
 Requires:	php-pcre
 Requires:	php-pear
 Suggests:	php-mbstring
+Obsoletes:	php-pear-Text_LanguageDetect-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,20 +33,6 @@ Text_LanguageDetect potrafi zidentyfikować 52 ludzkie języki z próbek
 tekstu i zwrócić listę najbardziej prawdopodobnych rezultatów.
 
 Ta klasa ma w PEAR status: %{_status}.
-
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -75,7 +62,3 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/data/Text_LanguageDetect
 
 %{_examplesdir}/%{name}-%{version}
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
