@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	Text_LanguageDetect
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - language detection class
 Summary(pl.UTF-8):	%{pearname} - klasa do określania języka
 Name:		php-pear-%{pearname}
